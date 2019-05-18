@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "mtprices.com",
   "author": "Doug Hatcher <superterran@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vue-storefront": "^1.0.1-RC"
+  }
 }
