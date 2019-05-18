@@ -1,3 +1,0 @@
-# PartPile.io
-
-Coming soon, if at all...
