@@ -1,10 +1,15 @@
 version: '3'
 services:
   frontend:
-    build: ./frontend/
+    build: 
+      context: ./frontend/
+      dockerfile: Dockerfile
     ports: 
     - 3000:80
     volumes:
     - ./frontend/:/app:rw
-  
+  backend-nginx:
+    build:
+      context: ./backend/
+      dockerfile: web.Dockerfile
 

@@ -1,3 +1,3 @@
 FROM node:8
-COPY * /app/
+COPY app/* /app/
 RUN cd /app && yarn install
