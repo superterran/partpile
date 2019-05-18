@@ -1,0 +1,9 @@
+{
+  "name": "mtprices-frontend",
+  "version": "1.0.0",
+  "description": "Frontend app for Mt. Prices",
+  "main": "index.js",
+  "repository": "mtprices.com",
+  "author": "Doug Hatcher <superterran@gmail.com>",
+  "license": "MIT"
+}
