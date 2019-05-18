@@ -1,0 +1,13 @@
+{
+    "name": "mtprices/backend",
+    "description": "a magento backend",
+    "require": {
+        "magento/community-edition": "^2.3"
+    },
+    "authors": [
+        {
+            "name": "Doug Hatcher",
+            "email": "superterran@gmail.com"
+        }
+    ]
+}
