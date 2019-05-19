@@ -12,12 +12,14 @@ services:
       dockerfile: web.Dockerfile
     ports:
       - 80:80
-  php:
+  admin:
     build:
       context: ./etc/
-      dockerfile: php.Dockerfile
+      dockerfile: admin.Dockerfile
     expose:
       - "9000"
+    # volumes:
+    #   - ./etc/admin/app:/app:rw
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password

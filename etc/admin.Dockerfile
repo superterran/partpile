@@ -43,3 +43,9 @@ RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 RUN mv /var/www/html/composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
+
+# Lets run Magento Installation
+
+COPY ./admin/app /app
+
+RUN cd /app && composer install
