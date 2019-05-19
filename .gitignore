@@ -1,5 +1,5 @@
 etc/pwa/app/node_modules
-etc/admin/app/vendor
+etc/admin/app/
 var
 .env
 etc/admin/app/auth.json

@@ -27,8 +27,8 @@ services:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
-    # volumes: 
-    #   - ./var/db:/var/lib/mysql:rw
+    volumes: 
+      - ./var/db:/var/lib/mysql:rw
     ports:
       - 33060:3306
     environment:

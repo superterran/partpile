@@ -2,4 +2,3 @@
 
 cd /srv/app
 composer install
-bin/magento
