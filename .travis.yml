@@ -7,4 +7,4 @@ matrix:
     allow_failures:
         - os: windows
         - os: osx
-script: cp .env.sample .env && make tests
+script: echo $AUTHJSON > etc/admin/app/auth.json && cp .env.sample .env && make tests
