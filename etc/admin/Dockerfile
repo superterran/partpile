@@ -46,6 +46,6 @@ RUN chmod +x /usr/local/bin/composer
 
 # Lets run Magento Installation
 
-COPY ./admin/app /app
+COPY ./app /app
 
 RUN cd /app && composer install

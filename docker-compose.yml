@@ -1,11 +1,10 @@
 version: '3'
 services:
   pwa:
-    image: node:8
+    build:
+      context: ./etc/pwa/
     ports: 
     - 3000:3000
-    volumes:
-    - ./etc/pwa/:/app:rw
   web:
     build:
       context: ./etc/
@@ -14,8 +13,7 @@ services:
       - ${WEBPORT}:80
   admin:
     build:
-      context: ./etc/
-      dockerfile: admin.Dockerfile
+      context: ./etc/admin/
     expose:
       - "9000"
     # volumes:
