@@ -1,30 +1,30 @@
 version: '3'
 services:
-  frontend:
-    build: 
-      context: ./frontend/
-      dockerfile: Dockerfile
+  pwa:
+    image: node:8
     ports: 
     - 3000:3000
     volumes:
-    - ./frontend/:/app:rw
-  backend-web:
+    - ./etc/pwa/:/app:rw
+  web:
     build:
-      context: ./backend/
+      context: ./etc/
       dockerfile: web.Dockerfile
     ports:
       - 80:80
-  backend-php:
+  php:
     build:
-      context: ./backend/
+      context: ./etc/
       dockerfile: php.Dockerfile
     expose:
       - "9000"
-  backend-db:
+  db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
-    volumes: 
-        - ./var/db:/var/lib/mysql:rw
+    # volumes: 
+    #   - ./var/db:/var/lib/mysql:rw
+    ports:
+      - 33060:3306
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
