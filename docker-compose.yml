@@ -11,7 +11,7 @@ services:
       context: ./etc/
       dockerfile: web.Dockerfile
     ports:
-      - 80:80
+      - ${WEBPORT}:80
   admin:
     build:
       context: ./etc/
