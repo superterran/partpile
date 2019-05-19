@@ -1,6 +1,6 @@
 {
     "name": "partpile/backend",
-    "description": "a magento backend",
+    "description": "a magento backend for partpile.io",
     "require": {
         "magento/community-edition": "^2.3"
     },
