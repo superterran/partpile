@@ -15,8 +15,9 @@ services:
       context: ./etc/admin/
     expose:
       - "9000"
-    # volumes:
-    #   - ./etc/admin/app:/app:rw
+    volumes:
+      - ./etc/admin/:/srv/:rw
+    command: /srv/bin/build
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
