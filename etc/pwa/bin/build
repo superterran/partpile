@@ -2,4 +2,6 @@
 
 cd /srv/app
 yarn install
-yarn dev
+
+cd /srv/app/node_modules/vue-storefront
+yarn install
