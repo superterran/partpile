@@ -20,3 +20,11 @@ services:
       dockerfile: php.Dockerfile
     expose:
       - "9000"
+  backend-db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes: 
+        - ./var/db:/var/lib/mysql:rw
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
