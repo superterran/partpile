@@ -1,7 +1,8 @@
 #!/bin/bash
+cd /srv/app/
+wget -O - https://github.com/DivanteLtd/vue-storefront/archive/v1.9.0.tar.gz | tar xz
 
-cd /srv/app
+cd vue-storefront-1.9.0
 yarn install
-
-cd /srv/app/node_modules/vue-storefront
-yarn install
+cp /srv/local.json config/local.json
+npm run dev

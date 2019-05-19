@@ -36,5 +36,5 @@ admin-build: ## runs the admin build scripts
 pwa-bash: ## can i get bash up in there?
 	docker-compose${DOCKEREXE} run pwa bash
 
-pwa-build: ## runs the admin build scripts
+pwa-build: ## runs the pwa build scripts
 	docker-compose${DOCKEREXE} run pwa /srv/bin/build

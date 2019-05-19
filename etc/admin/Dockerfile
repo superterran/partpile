@@ -43,4 +43,3 @@ RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 RUN mv /var/www/html/composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
-RUN echo $COMPOSER_HOME

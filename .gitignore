@@ -1,4 +1,4 @@
-etc/pwa/app/node_modules
+etc/pwa/app/vue-storefront-1.9.0
 etc/admin/app/
 var
 .env
