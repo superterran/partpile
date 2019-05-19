@@ -2,7 +2,6 @@
   "name": "partpile-pwa",
   "version": "1.0.0",
   "description": "A vue storefront pwa frontend",
-  "main": "index.js",
   "repository": "partpile.io",
   "author": "Doug Hatcher <superterran@gmail.com>",
   "license": "MIT",

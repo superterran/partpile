@@ -48,4 +48,4 @@ RUN chmod +x /usr/local/bin/composer
 
 COPY ./app /app
 
-RUN cd /app && composer install
+# RUN cd /app && composer install

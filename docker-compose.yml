@@ -1,16 +1,15 @@
 version: '3'
 services:
+  web:
+    build:
+      context: ./etc/web
+    ports:
+      - ${WEBPORT}:80
   pwa:
     build:
       context: ./etc/pwa/
     ports: 
     - 3000:3000
-  web:
-    build:
-      context: ./etc/
-      dockerfile: web.Dockerfile
-    ports:
-      - ${WEBPORT}:80
   admin:
     build:
       context: ./etc/admin/

@@ -15,6 +15,9 @@ build: ## builds containers
 up: ## ups the composition
 	docker-compose${DOCKEREXE} up --force-recreate --build
 
+down: ## downs the composition
+	docker-compose${DOCKEREXE} down
+
 bash: ## bash script to various services
 	docker-compose${DOCKEREXE} exec php bash
 
