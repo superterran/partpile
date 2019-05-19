@@ -14,7 +14,7 @@ services:
     - 3000:3000
     volumes:
       - ./etc/pwa:/srv:rw
-    command: /srv/bin/build
+    # command: /srv/bin/build
   admin:
     build:
       context: ./etc/admin/
@@ -22,7 +22,7 @@ services:
       - "9000"
     volumes:
       - ./etc/admin:/srv:rw
-    command: /srv/bin/build
+    # command: /srv/bin/build
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password

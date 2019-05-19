@@ -13,7 +13,7 @@ build: ## builds containers
 	docker-compose${DOCKEREXE} build
 
 up: ## ups the composition
-	docker-compose${DOCKEREXE} up --force-recreate --build
+	docker-compose${DOCKEREXE} up --force-recreate --build -d
 	
 down: ## downs the composition
 	docker-compose${DOCKEREXE} down
@@ -26,3 +26,15 @@ tests: up # runs some basic tests
 wipe: down ## wipes the generated dirs
 	rm -rf etc/admin/app/vendor/
 	rm -rf etc/pwa/app/node_modules/
+
+admin-bash: ## can i get bash up in there?
+	docker-compose${DOCKEREXE} run admin bash
+
+admin-build: ## runs the admin build scripts
+	docker-compose${DOCKEREXE} run admin /srv/bin/build
+
+admin-bash: ## can i get bash up in there?
+	docker-compose${DOCKEREXE} run pwa bash
+
+pwa-build: ## runs the admin build scripts
+	docker-compose${DOCKEREXE} run pwa /srv/bin/build
