@@ -5,11 +5,18 @@ services:
       context: ./frontend/
       dockerfile: Dockerfile
     ports: 
-    - 3000:80
+    - 3000:3000
     volumes:
     - ./frontend/:/app:rw
-  backend-nginx:
+  backend-web:
     build:
       context: ./backend/
       dockerfile: web.Dockerfile
-
+    ports:
+      - 80:80
+  backend-php:
+    build:
+      context: ./backend/
+      dockerfile: php.Dockerfile
+    expose:
+      - "9000"
