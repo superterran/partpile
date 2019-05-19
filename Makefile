@@ -23,3 +23,7 @@ bash: ## bash script to various services
 
 tests: ## runs some basic tests
 	docker-compose${DOCKEREXE} build
+
+wipe: down ## wipes the generated dirs
+	rm -rf etc/admin/app/vendor/
+	rm -rf etc/pwa/app/node_modules/
