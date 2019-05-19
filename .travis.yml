@@ -7,4 +7,4 @@ matrix:
     allow_failures:
         - os: windows
         - os: osx
-script: make tests
+script: cp .env.sample .env && make tests
