@@ -2,3 +2,4 @@ etc/pwa/app/node_modules
 etc/admin/app/vendor
 var
 .env
+etc/admin/app/auth.json

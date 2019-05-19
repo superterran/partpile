@@ -13,7 +13,7 @@ services:
     ports: 
     - 3000:3000
     volumes:
-    - ./etc/pwa/:/srv/:rw
+      - ./etc/pwa:/srv:rw
     command: /srv/bin/build
   admin:
     build:
@@ -21,7 +21,7 @@ services:
     expose:
       - "9000"
     volumes:
-      - ./etc/admin/:/srv/:rw
+      - ./etc/admin:/srv:rw
     command: /srv/bin/build
   db:
     image: mysql
