@@ -13,7 +13,7 @@ build: ## builds containers
 	docker-compose${DOCKEREXE} build
 
 up: ## ups the composition
-	docker-compose${DOCKEREXE} up --force-recreate --build
+	docker-compose${DOCKEREXE} up --force-recreate --build -d
 
 down: ## downs the composition
 	docker-compose${DOCKEREXE} down
@@ -21,8 +21,7 @@ down: ## downs the composition
 bash: ## bash script to various services
 	docker-compose${DOCKEREXE} exec php bash
 
-tests: ## runs some basic tests
-	docker-compose${DOCKEREXE} build
+tests: up # runs some basic tests
 
 wipe: down ## wipes the generated dirs
 	rm -rf etc/admin/app/vendor/
