@@ -19,3 +19,6 @@ up: ## ups the composition
 
 bash: ## bash script to various services
 	docker-compose${DOCKEREXE} exec php bash
+
+tests: ## runs some basic tests
+	docker-compose${DOCKEREXE} build
