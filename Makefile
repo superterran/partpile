@@ -33,7 +33,7 @@ admin-bash: ## can i get bash up in there?
 admin-build: ## runs the admin build scripts
 	docker-compose${DOCKEREXE} run admin /srv/bin/build
 
-admin-bash: ## can i get bash up in there?
+pwa-bash: ## can i get bash up in there?
 	docker-compose${DOCKEREXE} run pwa bash
 
 pwa-build: ## runs the admin build scripts
