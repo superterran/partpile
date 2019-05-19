@@ -6,7 +6,7 @@ services:
     ports:
       - ${WEBPORT}:80
     environment:
-      - WEBURL=${WEBURL}
+      - WEBURL=WEBURL
   pwa:
     build:
       context: ./etc/pwa/
