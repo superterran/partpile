@@ -1,5 +1,5 @@
 {
-    "name": "mtprices/backend",
+    "name": "partpile/backend",
     "description": "a magento backend",
     "require": {
         "magento/community-edition": "^2.3"
