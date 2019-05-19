@@ -1,7 +1,5 @@
-DOCKEREXE=
-ifneq ($(UNAME), Linux)
-    DOCKEREXE :=.exe
-endif
+include .env
+export
 
 .PHONY: help
 
